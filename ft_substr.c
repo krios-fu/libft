@@ -6,7 +6,7 @@
 /*   By: krios-fu <krios-fu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/18 13:41:09 by krios-fu          #+#    #+#             */
-/*   Updated: 2020/02/05 14:39:30 by krios-fu         ###   ########.fr       */
+/*   Updated: 2021/03/31 16:18:52 by krios-fu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (start > ft_strlen(s))
 		return (ft_strdup(""));
-	if (!(s2 = malloc(sizeof(char) * len + 1)))
+	s2 = malloc(sizeof(char) * len + 1);
+	if (!s2)
 		return (NULL);
 	while (i < len)
 	{

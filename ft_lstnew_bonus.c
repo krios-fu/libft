@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bunus.c                                  :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: krios-fu <krios-fu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 02:39:06 by krios-fu          #+#    #+#             */
-/*   Updated: 2020/01/29 15:36:17 by krios-fu         ###   ########.fr       */
+/*   Updated: 2021/03/31 16:44:12 by krios-fu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*list;
 
-	if (!(list = (t_list *)malloc(sizeof(t_list))))
+	list = (t_list *)malloc(sizeof(t_list));
+	if (!list)
 		return (NULL);
-	list->content = (void*)content;
+	list->content = (void *)content;
 	list->next = NULL;
 	return (list);
 }

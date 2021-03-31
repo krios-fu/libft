@@ -6,13 +6,13 @@
 /*   By: krios-fu <krios-fu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 13:57:00 by krios-fu          #+#    #+#             */
-/*   Updated: 2020/02/03 10:33:32 by krios-fu         ###   ########.fr       */
+/*   Updated: 2021/03/31 16:20:16 by krios-fu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned char	*ss1;
 	unsigned char	*ss2;

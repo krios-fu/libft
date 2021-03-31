@@ -6,7 +6,7 @@
 /*   By: krios-fu <krios-fu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 17:40:49 by krios-fu          #+#    #+#             */
-/*   Updated: 2020/01/27 22:40:26 by krios-fu         ###   ########.fr       */
+/*   Updated: 2021/03/31 16:41:34 by krios-fu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static size_t	ft_numchar(const char *s, char c)
 	return (count);
 }
 
-static char		**ft_free_matrix(const char **matrix, size_t len_matrix)
+static char	**ft_free_matrix(const char **matrix, size_t len_matrix)
 {
 	while (len_matrix--)
 		free((void *)matrix[len_matrix]);
@@ -54,29 +54,29 @@ static char		**ft_free_matrix(const char **matrix, size_t len_matrix)
 	return (NULL);
 }
 
-char			**ft_split(const char *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char	**matrix;
 	size_t	len;
 	size_t	i;
 	size_t	sl;
-	char	*new_s;
 
 	i = 0;
 	sl = 0;
 	len = ft_numstring(s, c);
-	if (!(matrix = (char **)malloc(sizeof(char *) * (len + 1))))
+	matrix = (char **)malloc(sizeof(char *) * (len + 1));
+	if (!matrix)
 		return (NULL);
-	new_s = (char *)s;
 	while (i < len)
 	{
-		while (*new_s == c)
-			new_s++;
-		sl = ft_numchar((const char *)new_s, c);
-		if (!(matrix[i] = (char *)malloc(sizeof(char) * sl + 1)))
+		while (*s == c)
+			s++;
+		sl = ft_numchar((const char *)s, c);
+		matrix[i] = (char *)malloc(sizeof(char) * sl + 1);
+		if (!matrix[i])
 			return (ft_free_matrix((const char **)matrix, len));
-		ft_strlcpy(matrix[i], new_s, sl + 1);
-		new_s = (ft_strchr(new_s, (int)c));
+		ft_strlcpy(matrix[i], s, sl + 1);
+		s = (ft_strchr(s, (int)c));
 		i++;
 	}
 	matrix[i] = 0;

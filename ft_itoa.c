@@ -6,7 +6,7 @@
 /*   By: krios-fu <krios-fu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 16:59:50 by krios-fu          #+#    #+#             */
-/*   Updated: 2020/01/27 15:17:42 by krios-fu         ###   ########.fr       */
+/*   Updated: 2021/03/31 15:52:36 by krios-fu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static size_t	ft_intlen(long nb)
 	return (count);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*strnum;
 	size_t	len;
@@ -43,7 +43,8 @@ char			*ft_itoa(int n)
 
 	nb = n;
 	len = ft_intlen(nb);
-	if (!(strnum = (char *)malloc(sizeof(char) * len + 1)))
+	strnum = (char *)malloc(sizeof(char) * len + 1);
+	if (!strnum)
 		return (NULL);
 	strnum[len--] = '\0';
 	if (n == 0)

@@ -6,7 +6,7 @@
 /*   By: krios-fu <krios-fu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/26 00:10:58 by krios-fu          #+#    #+#             */
-/*   Updated: 2020/01/27 13:04:10 by krios-fu         ###   ########.fr       */
+/*   Updated: 2021/03/31 16:20:47 by krios-fu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	if (!(newstr = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))))
+	newstr = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!newstr)
 		return (NULL);
 	i = 0;
 	while (s[i] != '\0')

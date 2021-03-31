@@ -6,7 +6,7 @@
 /*   By: krios-fu <krios-fu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 17:33:47 by krios-fu          #+#    #+#             */
-/*   Updated: 2020/01/27 20:59:36 by krios-fu         ###   ########.fr       */
+/*   Updated: 2021/03/31 15:45:32 by krios-fu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_isspace(char *str)
 	return (&str[i]);
 }
 
-int		ft_cmp_p_n(char *str)
+int	ft_cmp_p_n(char *str)
 {
 	int	i;
 	int	flag;
@@ -42,7 +42,7 @@ int		ft_cmp_p_n(char *str)
 
 char	*ft_position(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (str[i] == '-' || str[i] == '+')
@@ -50,7 +50,7 @@ char	*ft_position(char *str)
 	return (&str[i]);
 }
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	char		*ptr;
 	int			i;

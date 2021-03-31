@@ -6,7 +6,7 @@
 /*   By: krios-fu <krios-fu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 16:33:37 by krios-fu          #+#    #+#             */
-/*   Updated: 2020/01/11 17:13:16 by krios-fu         ###   ########.fr       */
+/*   Updated: 2021/03/31 15:46:18 by krios-fu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *x;
+	unsigned char	*x;
 
 	x = (unsigned char *)s;
 	while (n > 0)
